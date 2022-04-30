@@ -40,6 +40,24 @@ a:active {
   color: red;
 }
 
+ul{
+  padding-left: 0px;
+  list-style-type: none;
+
+}
+li{
+  display: inline-block;
+
+}
+li a {
+  display: inline-block;
+    padding: 10px 25px;
+}
+a:hover{
+  background-color: #333;
+  transition: 0.3s;
+}
+
 
 /* --- Cabeçalho --- */
 #cabecalho {
@@ -103,7 +121,27 @@ a:active {
   margin-bottom: .5em;
 }
 
+#posts-principais .post .titulo{
+  position: relative; 
+  background-color: rgba(255, 255, 255, 0.411);
+  bottom: 235px;
+  padding: 20px;
+  height: 150px;
+  opacity: 0;
 
+}
+#posts-principais .post .titulo:hover{
+  transition: 0.3s;
+  opacity: 1;
+
+}
+
+
+#posts-principais .post time{
+  position: relative; 
+  bottom: 200px;
+  
+}
 
 
 /* --- Principal >> Últimas postagens --- */
@@ -117,7 +155,7 @@ a:active {
   margin-bottom: 1em;
 }
 
-#ultimas-postagens .post .data-horario {
+#ultimas-postagens .post time{
   background-color: white;
   color: #333;
   border: 1px solid black;
@@ -133,11 +171,23 @@ a:active {
   display: inline-block;
 }
 
+.novidade::before {
+  content: "Novidade!";
+  display: inline-block;
+  padding: 3px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, .15);
+  border: 1px dotted orange;
+  color: orange;
+}
+
 
 
 
 /* --- Principal >> Nuvem de tags --- */
 #tags {
+
+  box-sizing: border-box;
   float: right;
   width: 300px;
   padding: 15px;
@@ -147,6 +197,21 @@ a:active {
   background-size: 300px;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  position: sticky;
+  top: 0px;
+}
+#tags aside{
+  position: relative;
+  
+}
+#tags aside:hover{
+  cursor: default;
+}
+
+#tags aside:active{
+  right: 2px;
+  bottom: 2px;
+  cursor: crosshair;
 }
 
 #tags h1 {
@@ -173,6 +238,36 @@ a:active {
 .tag-3 {
   font-size: 150%;
 }
+
+.boo:nth-child(1n){
+  position: absolute;
+  top: 450px;
+  opacity: 0.1;
+  
+
+}
+.boo:nth-child(2n){
+  position: absolute;
+  bottom: 500px;
+  left: 300px;
+}
+.boo:nth-child(3n){
+  position: absolute;
+  top: 600px;
+  left: 500px;
+}
+
+.boo:hover{
+  width: 250px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.boo:hover:nth-child(3n){
+  width: 350px;
+  transform: scaleX(-1);
+}
+
 
 
 
